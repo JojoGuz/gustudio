@@ -1,20 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gu Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jojo's Pod</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 520px;
+      padding: 40px 20px 60px;
+    }
+
+    .cover {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 20px 0 6px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 40px; max-width: 600px; margin: auto;">
+<body>
+  <div class="container">
+    
+    <!-- 封面 -->
+    <img class="cover" src="cover.jpg" alt="Podcast Cover" />
 
-  <h1>Jojo’s Pod</h1>
-  <p>2026</p>
+    <!-- 标题 -->
+    <h1>Jojo’s Pod #001</h1>
+    <div class="subtitle">多向思考者</div>
 
-  <h2>Episode 01</h2>
-  <p>慢悠悠的春天</p>
+    <!-- 播放器 -->
+    <audio controls>
+      <source src="episode1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
-  <audio controls>
-    <source src="episode01.mp3" type="audio/mpeg">
-  </audio>
+    <!-- 简介 -->
+    <div class="description">
+      这是第一期播客。一个关于判断力、时间与自我观察的开始。
+      <br><br>
+      可能有点笨拙，但是真实。
+    </div>
 
+    <footer>
+      © 2026 Jojo’s Pod
+    </footer>
+
+  </div>
 </body>
 </html>
