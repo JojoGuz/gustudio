@@ -55,48 +55,56 @@
       color: #aaa;
       text-align: center;
     }
+
+    .episode {
+  margin-bottom: 40px;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 40px 0;
+}
+    
   </style>
 </head>
 <body>
 
   <div class="container">
-    
-    <!-- 封面 -->
-    <img class="cover" src="2026ep02cover.png" alt="Podcast Cover" />
 
-    <!-- 播放器 -->
-    <audio controls>
-      <source src="2026ep02.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <!-- 第一期 -->
+    <div class="episode">
+      <img class="cover" src="2026ep02cover.png" alt="Podcast Cover" />
 
-    <!-- 简介 -->
-    <div class="description">
-      2026.04.19<br>
-      我们到底如何看待“人”<br>
-      是作为一个具体的个体，<br>
-      还是作为某种身份、角色，甚至工具。
+      <audio controls>
+        <source src="2026ep02.mp3" type="audio/mpeg">
+      </audio>
 
+      <div class="description">
+        2026.04.19<br>
+        我们到底如何看待“人”<br>
+        是作为一个具体的个体，<br>
+        还是作为某种身份、角色，甚至工具。
+      </div>
     </div>
-  
-  <div class="container">
-    
-    <!-- 封面 -->
-    <img class="cover" src="2026ep01cover-b.png" alt="Podcast Cover" />
 
-    <!-- 播放器 -->
-    <audio controls>
-      <source src="2026ep01.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <!-- 分隔线 -->
+    <div class="divider"></div>
 
-    <!-- 简介 -->
-    <div class="description">
-      2026.04.05<br>
-      又清明<br>
-      慢悠悠的春天里 <br>
-      all paradox
-    
+    <!-- 第二期 -->
+    <div class="episode">
+      <img class="cover" src="2026ep01cover-b.png" alt="Podcast Cover" />
+
+      <audio controls>
+        <source src="2026ep01.mp3" type="audio/mpeg">
+      </audio>
+
+      <div class="description">
+        2026.04.05<br>
+        又清明<br>
+        慢悠悠的春天里 <br>
+        all paradox
+      </div>
     </div>
 
     <footer>
@@ -104,5 +112,5 @@
     </footer>
 
   </div>
+
 </body>
-</html>
