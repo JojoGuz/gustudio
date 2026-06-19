@@ -267,10 +267,10 @@ document.querySelectorAll(".toggle-image").forEach(img => {
 
     setTimeout(() => {
 
-      if (img.getAttribute("src") === img.dataset.cover) {
-        img.setAttribute("src", img.dataset.art);
+      if (img.src.includes(img.dataset.cover)) {
+        img.src = img.dataset.art;
       } else {
-        img.setAttribute("src", img.dataset.cover);
+        img.src = img.dataset.cover;
       }
 
       img.style.opacity = 1;
