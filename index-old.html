@@ -65,38 +65,12 @@
   background: #e5e5e5;
   margin: 40px 0;
 }
-
-.toggle-image{
-  cursor:pointer;
-  transition:opacity .25s ease;
-}
     
   </style>
 </head>
 <body>
 
   <div class="container">
-
-  <!-- 第六期 -->
-    <div class="episode">
-      <img
-        class="cover toggle-image"
-        src="2026prints00cover.png"
-        data-cover="2026prints00cover.png"
-        data-art="2026prints00img.png"
-        alt="Print Cover">
-
-      <div class="description">
-      2026.06.19 #prints<br>
-       <br>
-      五月五日午<br>
-      与君一支艾<br>
-		  <br>
-      </div>
-    </div>
-
-    <!-- 分隔线 -->
-    <div class="divider"></div>
     
   <!-- 第六期 -->
     <div class="episode">
@@ -258,31 +232,3 @@
   </div>
 
 </body>
-
-<script>
-
-document.querySelectorAll(".toggle-image").forEach(img => {
-
-  img.addEventListener("click", () => {
-
-    img.style.opacity = 0;
-
-    setTimeout(() => {
-
-      if (img.src.includes(img.dataset.cover)) {
-        img.src = img.dataset.art;
-      } else {
-        img.src = img.dataset.cover;
-      }
-
-      img.style.opacity = 1;
-
-    },180);
-
-  });
-
-});
-
-</script>
-
-</html>
