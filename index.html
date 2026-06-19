@@ -259,8 +259,6 @@
 
 </body>
 
-<script>
-
 document.querySelectorAll(".toggle-image").forEach(img => {
 
   img.addEventListener("click", () => {
@@ -269,10 +267,10 @@ document.querySelectorAll(".toggle-image").forEach(img => {
 
     setTimeout(() => {
 
-      if (img.src.includes(img.dataset.cover)) {
-        img.src = img.dataset.art;
+      if (img.getAttribute("src") === img.dataset.cover) {
+        img.setAttribute("src", img.dataset.art);
       } else {
-        img.src = img.dataset.cover;
+        img.setAttribute("src", img.dataset.cover);
       }
 
       img.style.opacity = 1;
@@ -282,7 +280,4 @@ document.querySelectorAll(".toggle-image").forEach(img => {
   });
 
 });
-
-</script>
-
 </html>
