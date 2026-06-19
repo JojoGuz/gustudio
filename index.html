@@ -68,8 +68,7 @@
 
 .toggle-image{
   cursor:pointer;
-  transition:opacity 0.25s ease;
-  will-change: opacity;
+  
 }
     
   </style>
@@ -260,33 +259,25 @@
 
 <script>
 
+
 document.querySelectorAll(".toggle-image").forEach(img => {
 
-  // 预加载作品图片
-  const preload = new Image();
-  preload.src = img.dataset.art;
+  // 预加载
+  new Image().src = img.dataset.art;
 
   img.addEventListener("click", () => {
 
-    img.style.opacity = "0";
+    const next =
+      img.getAttribute("src") === img.dataset.cover
+        ? img.dataset.art
+        : img.dataset.cover;
 
-    setTimeout(() => {
-
-      const showingCover =
-        img.getAttribute("src") === img.dataset.cover;
-
-      img.setAttribute(
-        "src",
-        showingCover ? img.dataset.art : img.dataset.cover
-      );
-
-      img.style.opacity = "1";
-
-    }, 180);
+    img.src = next;
 
   });
 
 });
+
 </script>
 
 
