@@ -68,8 +68,8 @@
 
 .toggle-image{
   cursor:pointer;
-  transition:opacity .25s ease;
-  will-change: opacity;
+  transition:opacity 0.25s ease;
+  will-changer
 }
     
   </style>
@@ -78,13 +78,13 @@
 
   <div class="container">
 
-  <!-- 第六期 -->
+  <!-- 印品 .0 pilot  -->
     <div class="episode">
       <img
         class="cover toggle-image"
         src="2026prints00cover.png"
         data-cover="2026prints00cover.png"
-        data-art="2026prints00img.png"
+        data-art="2026prints00img.jpg"
         alt="Print Cover">
 
       <div class="description">
@@ -258,31 +258,39 @@
 
   </div>
 
-</body>
 <script>
+
 document.querySelectorAll(".toggle-image").forEach(img => {
 
-   const preload = new Image();
-    preload.src = img.dataset.art;
+  // 预加载作品图片
+  const preload = new Image();
+  preload.src = img.dataset.art;
 
   img.addEventListener("click", () => {
 
-    img.style.opacity = 0;
+    img.style.opacity = "0";
 
     setTimeout(() => {
 
-      if (img.src.includes(img.dataset.cover)) {
-        img.src = img.dataset.art;
-      } else {
-        img.src = img.dataset.cover;
-      }
+      const showingCover =
+        img.getAttribute("src") === img.dataset.cover;
 
-      img.style.opacity = 1;
+      img.setAttribute(
+        "src",
+        showingCover ? img.dataset.art : img.dataset.cover
+      );
 
-    },180);
+      img.style.opacity = "1";
+
+    }, 180);
 
   });
 
 });
 </script>
+
+
+
+</body>
+
 </html>
