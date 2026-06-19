@@ -263,6 +263,9 @@
 
 document.querySelectorAll(".toggle-image").forEach(img => {
 
+   const preload = new Image();
+    preload.src = img.dataset.art;
+
   img.addEventListener("click", () => {
 
     img.style.opacity = 0;
